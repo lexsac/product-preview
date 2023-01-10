@@ -1,6 +1,9 @@
 body {
     background-color: #F2EAE2;
     font-family: Outfit;
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
 }
 
 .container {
@@ -8,6 +11,57 @@ body {
     place-items: center;
     height: 100vh;
     grid-template-columns: 1;
+}
+
+.card-header {
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #6C7289;
+    letter-spacing: 5px;
+    line-height: 15px;
+}
+
+.card-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #1C232B;
+    font-family: 'Fraunces', serif;
+    line-height: 32px;
+}
+
+.card-description {
+    line-height: 23px;
+    color: #6C7289;
+}
+
+.card-price-sale {
+    font-family: 'Fraunces';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 32px;
+    color: #3D8168;
+}
+
+.card-price-old {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 23px;
+    text-decoration-line: line-through;
+    color: #6C7289;
+}
+
+.add-to-cart {
+    width: 236px;
+    height: 48px;
+    background-color: #3D8168;
+    border-radius: 8px;
+    color: white;
+    font-weight: 700;
+    line-height: 17.07px;
+    border-style: none;
 }
 
 .card {
