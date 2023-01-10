@@ -1,0 +1,26 @@
+body {
+    background-color: #F2EAE2;
+    font-family: Outfit;
+}
+
+.container {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+.card {
+    background-color: hsl(0, 0%, 100%);
+    height: 450px;
+    width: 600px;
+    border-radius: 10px;
+}
+
+.img-product-desktop {
+    width: 300px;
+    border-radius: 10px 0px 0px 10px;
+}
+
+.card-text {
+    
+}
