@@ -7,12 +7,17 @@
     --neutral-dark-grayish-blue: hsl(228, 12%, 48%);
     --neutral-white: hsl(0, 0%, 100%);
 
+    /* For hover button */
+    --deep-aquamarine: #1A4032;
+
     --font-weight-regular: 500;
     --font-weight-bold: 700;
 
     --font-size-body: 14px;
-}
 
+    --font-family-accent: 'Fraunces', serif;
+    --font-family-main: 'Montserrat', sans-serif;
+}
 
 /* CSS reset */
 /* Credit: https://www.joshwcomeau.com/css/custom-css-reset/ */
@@ -31,7 +36,7 @@ html, body {
 }
 /* Typographic tweaks! Add accessible line-height, improve text rendering */
 body {
-    line-height: 1.5;
+    line-height: 1.7;
     -webkit-font-smoothing: antialiased;
 }
 /* Improve media defaults */
@@ -48,91 +53,107 @@ p, h1, h2, h3, h4, h5, h6 {
     overflow-wrap: break-word;
 }
 
+/* Smaller line height for larger font sizes */
+h1 {
+    line-height: 1;
+}
 
-
-
-
+/* General styling */
 body {
-    background-color: #F2EAE2;
-    font-family: Outfit;
-    font-size: 14px;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 500;
-}
+    font-family: var(--font-family-main);
+    font-weight: var(--font-weight-regular);
+    color: var(--neutral-dark-grayish-blue);
+    font-size: var(--font-size-body);
+    background-color: var(--primary-cream);
 
-.container {
     display: grid;
-    place-items: center;
-    height: 100vh;
-    grid-template-columns: 1;
+    margin: 1rem;
+    justify-content: center;
+    align-items: center;
 }
 
-.card-header {
-    font-size: 12px;
-    text-transform: uppercase;
-    color: #6C7289;
-    letter-spacing: 5px;
-    line-height: 15px;
-}
-
-.card-title {
-    font-size: 32px;
-    font-weight: 700;
-    color: #1C232B;
-    font-family: 'Fraunces', serif;
-    line-height: 32px;
-}
-
-.card-description {
-    line-height: 23px;
-    color: #6C7289;
-}
-
-.card-price-sale {
-    font-family: 'Fraunces';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 32px;
-    line-height: 32px;
-    color: #3D8168;
-}
-
-.card-price-old {
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 13px;
-    line-height: 23px;
-    text-decoration-line: line-through;
-    color: #6C7289;
-}
-
-.add-to-cart {
-    width: 236px;
-    height: 48px;
-    background-color: #3D8168;
-    border-radius: 8px;
-    color: white;
-    font-weight: 700;
-    line-height: 17.07px;
-    border-style: none;
-}
-
-.card {
-    background-color: hsl(0, 0%, 100%);
-    height: 450px;
-    width: 600px;
+/* Product card styling */
+.product {
+    background-color: var(--neutral-white);
     border-radius: 10px;
+    overflow: hidden;
+
     display: grid;
-    grid-template-columns: 300px 1fr;
-    grid-gap: 32px;
+    max-width: 600px;
 }
 
-.img-product-desktop {
-    width: 300px;
-    border-radius: 10px 0px 0px 10px;
+@media (min-width: 600px) {
+    .product {
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
+.product__content {
+    padding: 1.5rem;
+    display: grid;
+    gap: 1rem;
+}
+
+.product__category {
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 12px;
+}
+
+.product__title {
+    font-family: var(--font-family-accent);
+    font-size: 32px;
+    color: var(--neutral-very-dark-blue);
+}
+
+.product__price-sale {
+    font-family: var(--font-family-accent);
+    font-size: 32px;
+    color: var(--primary-dark-cyan);
+}
+
+.product__price-original {
+    font-size: 13px;
+    text-decoration: line-through;
+}
+
+/* Button styling */
+.button {
+    cursor: pointer;
+    padding: 0.5em 1.5em;
+    border: none;
+    text-decoration: none;
+    background-color: var(--primary-dark-cyan);
+    color: var(--neutral-white);
+    font-weight: var(--font-weight-bold);
+    border-radius: 8px;
+
+    display: inline-flex;
+    gap: 0.75rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.button[data-icon="shopping-cart-icon"]::before {
+    content: "";
+    height: 16px;
+    width: 15px;
+    background-image: url("images/icon-cart.svg"); 
+}
+
+.button:is(:hover, :focus) {
+    background-color: var(--deep-aquamarine);
+}
+
+/* Pricing layout */
+.flex-group {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+/* Footer styling */
 .attribution { 
     font-size: 11px; 
     text-align: center
@@ -140,4 +161,4 @@ body {
 
 .attribution a { 
     color: hsl(228, 45%, 44%)
-}
+} */
