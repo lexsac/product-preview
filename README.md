@@ -47,12 +47,12 @@ Users should be able to:
 
 ### What I learned
 
-On this project, I focused on applying new skills to make my code more professional/scalable. Namely, I used CSS custom properties, focused on a mobile-first build, and incorporated additional comments/notes into my CSS to my code cleaner and easier to quickly understand. 
+On this project, I focused on applying new skills to make my code more professional/scalable. Namely, I used BEM for naming convention, CSS custom properties, focused on a mobile-first build, and incorporated additional comments/notes into my CSS to make my code cleaner and easier to quickly understand. 
 
 
 ### Continued development
 
-I am still working on becoming more comfortable wtih layout and sizing decisions. For example, I was unsure when to rely on Figma for pixel measurements vs. use another responsive unit of measurement. I also was unsure how exact I needed to in terms of spacing between items (do they need to be pixel-perfect, or is responsive spacing sufficient?). I am going to research this area more and focus on it in my next Frontend Mentor project.
+I am still working on becoming more comfortable wtih layout and sizing decisions. For example, I was unsure when to rely on Figma for pixel measurements vs. use another responsive unit of measurement. I also was unsure how exact I needed to in terms of spacing between items (do they need to be pixel-perfect per the Figma file, or is responsive spacing sufficient?). I am going to research this area more and focus on it in my next Frontend Mentor project.
 
 ### Useful resources
 
